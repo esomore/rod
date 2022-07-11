@@ -45,6 +45,7 @@ mod tests {
         }
     }
 
+    #[ignore = "taking too long to run"]
     #[tokio::test]
     async fn connect_and_sync_over_websocket() {
         let config = Config::default();
@@ -72,6 +73,7 @@ mod tests {
         peer2.stop();
     }
 
+    #[ignore = "taking too long to run"]
     #[tokio::test]
     async fn connect_and_sync_longer_path_over_websocket() {
         let config = Config::default();
