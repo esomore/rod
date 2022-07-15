@@ -19,5 +19,6 @@ RUN --mount=type=cache,target=/volume/target \
 ####################################################################################################
 FROM gcr.io/distroless/static:nonroot
 COPY --from=builder --chown=nonroot:nonroot /volume/rod /app/
+COPY assets /app/assets
 EXPOSE 4944 4945
 ENTRYPOINT ["/app/rod"]
